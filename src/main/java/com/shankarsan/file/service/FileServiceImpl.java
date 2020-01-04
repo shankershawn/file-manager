@@ -32,6 +32,8 @@ public class FileServiceImpl implements FileService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			fileUploadOutputDTO = new FileUploadOutputDTO("Something went wrong!");
+		} finally {
+			System.gc();
 		}
 		return fileUploadOutputDTO;
 	}
